@@ -1,4 +1,5 @@
 #include <vector>
+#include <iostream>
 
 #include "shape.h"
 #include "sphere.h"
@@ -15,7 +16,7 @@ int main()
     shapes.push_back(new Cone(10, 10, 10, 2, 5));
 
     for (int i = 0; i < shapes.size(); ++i)
-        shapes[i]->print();
+        cout << shapes[i] << endl;
 
     for (int i = 0; i < shapes.size(); ++i) {
         shapes[i]->move(-5, -10, 0);
@@ -23,5 +24,5 @@ int main()
     }
 
     for (int i = 0; i < shapes.size(); ++i)
-        shapes[i]->print();
+        cout << shapes[i] << endl;
 }

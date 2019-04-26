@@ -1,6 +1,8 @@
 #ifndef __SHAPE_H__
 #define __SHAPE_H__
 
+#include <iostream>
+
 class Shape
 {
 protected:
@@ -10,9 +12,9 @@ protected:
 public:
 	Shape(int _x, int _y, int _z);
 	void move(int dx, int dy, int dz);
-	void print();
 	virtual void scale(int factor) = 0;
 	virtual int volume() = 0;
+    friend std::ostream& operator<<(std::ostream& out, Shape* shape);
 };
 
 #endif
