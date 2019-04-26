@@ -14,7 +14,7 @@ public:
 	void move(int dx, int dy, int dz);
 	virtual void scale(int factor) = 0;
 	virtual int volume() = 0;
-    friend std::ostream& operator<<(std::ostream& out, Shape* shape);
+	friend std::ostream& operator<<(std::ostream& out, Shape* shape);
 };
 
 #endif
